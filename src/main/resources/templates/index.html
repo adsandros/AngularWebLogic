@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html ng-app="films" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" th:href="@{/webjars/bootstrap/3.3.7/css/bootstrap.min.css}" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{/img/favicon.ico}" href="../../img/favicon.ico" />
+    <link rel="stylesheet" th:href="@{/css/style.css}" href="../../css/style.css" />
+
+    <title>Items de Farmatodo</title>
+</head>
+
+<body ng-app="springmvc-angular" ng-controller="ItemController" ng-init="getFilms()">
+
+    <div class="container" ng-show="films != null">
+        <div class="jumbotron text-center">
+            <h1> Total de Items <span class="label label-info">{{ films.length }}</span></h1>
+        </div>
+
+        <div class="row" ng-repeat="film in films">
+            <div class="col">
+                <h4><span> {{film.itemId}} - {{film.itemDesc}} - {{film.image}} </span></h4>
+            </div>
+        </div>
+    </div>
+
+    <div class="form">
+        <label for="itemId">Item Id:</label>
+        <input id="itemId" ng-model="itemId" type="text" />
+
+        <label for="itemDesc">Item Descripcion:</label>
+        <input id="itemDesc" ng-model="itemDesc" type="text" />
+
+        <label for="image">Imagen:</label>
+        <input id="image" ng-model="image" type="text" />
+
+        <button id="addBtn" class="btn" ng-click="addFilm()">Añadir Item</button>
+    </div>
+
+    <h4>{{msg}}</h4>
+
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-resource.js"></script>
+    <script th:src="@{/js/services.js}" src="../../js/services.js" />
+</body>
+</html>
