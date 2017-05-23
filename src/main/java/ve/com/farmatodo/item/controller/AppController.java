@@ -13,6 +13,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 public class AppController {
     @RequestMapping(method = RequestMethod.GET)
     public String home() {
-        return "index";
+        return "demo";
     }
 }

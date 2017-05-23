@@ -6,7 +6,7 @@
 
   <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">
     <property name="jndiName">
-      <value>jdbc/BDUC_ITEM_REC</value>
+      <value>jdbc/BDUC</value>
     </property>
   </bean>
 </beans>

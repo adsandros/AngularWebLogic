@@ -19,7 +19,7 @@ app.controller('ItemController', [ '$scope', '$http',
                     image : $scope.image
                 }
             ).success(function(data) {
-                $scope.msg = 'Items creado correctamente Ok';
+                $scope.msg = 'Items creado correctamente';
                 $scope.getFilms();
             }).error(function(data) {
                 $scope.msg = 'Se ha producido un error';
