@@ -1935,7 +1935,7 @@ input.search-query {
 }
 
 .control-group {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 legend + .control-group {
@@ -1944,7 +1944,7 @@ legend + .control-group {
 }
 
 .form-horizontal .control-group {
-  margin-bottom: 20px;
+  margin-bottom: 10px;
   *zoom: 1;
 }
 

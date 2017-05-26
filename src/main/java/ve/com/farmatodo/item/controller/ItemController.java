@@ -20,8 +20,8 @@ public class ItemController {
     private static final List<ItemTo> DUMMY_ITEMS = new ArrayList<ItemTo>();
 
     static {
-        DUMMY_ITEMS.add(new ItemTo("12 years a slave", "2013", "Steve McQueen"));
-        DUMMY_ITEMS.add(new ItemTo("Argo", "2012", "Ben Affleck"));
+        DUMMY_ITEMS.add(new ItemTo("111554448", "Harina Pan", "No Tiene"));
+        DUMMY_ITEMS.add(new ItemTo("111852987", "Leche en Polvo la Campiña", "No Tiene"));
     }
 
     @RequestMapping(method = RequestMethod.GET)

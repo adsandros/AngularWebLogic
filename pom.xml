@@ -14,16 +14,13 @@
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <log4j.version>1.2.16</log4j.version>
-        <spring.version>4.3.4.RELEASE</spring.version>
-        <springsecurity.version>3.1.0.RELEASE</springsecurity.version>
-        <javaxservlet.version>3.0.1</javaxservlet.version>
-        <org.aspectj-version>1.7.4</org.aspectj-version>
-        <commonsfarmatodo.version>1.0</commonsfarmatodo.version>
+        <spring-boot-starter-parent.version>1.5.2.RELEASE</spring-boot-starter-parent.version>
+        <spring-boot-legacy.version>1.0.1.RELEASE</spring-boot-legacy.version>
+        <bootstrap.version>3.3.7</bootstrap.version>
         <hibernate-validator.version>5.3.3.Final</hibernate-validator.version>
+        <commonsfarmatodo.version>1.0</commonsfarmatodo.version>
         <maven.build.timestamp.format>yyyy-MM-dd</maven.build.timestamp.format>
         <packname>-${project.version}-FL-${maven.build.timestamp}</packname>
-        <!--start-class>ve.com.farmatodo.item.Application</start-class-->
     </properties>
     <repositories>
         <repository>
@@ -60,7 +57,7 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-legacy</artifactId>
-            <version>1.0.1.RELEASE</version>
+            <version>${spring-boot-legacy.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -70,13 +67,12 @@
         <dependency>
             <groupId>org.webjars</groupId>
             <artifactId>bootstrap</artifactId>
-            <version>3.3.7</version>
+            <version>${bootstrap.version}</version>
         </dependency>
-
         <dependency>
             <groupId>org.hibernate</groupId>
             <artifactId>hibernate-validator</artifactId>
-            <version>5.3.3.Final</version>
+            <version>${hibernate-validator.version}</version>
         </dependency>
         <dependency>
             <groupId>ve.com.farmatodo.commons</groupId>

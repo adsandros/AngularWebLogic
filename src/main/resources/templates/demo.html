@@ -5,7 +5,7 @@
     <meta charset="utf-8" />
         <!-- Bootstrap -->
         <link th:href="@{/bootstrap/css/bootstrap.min.css}" href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
-        <link rel="shortcut icon" type="image/x-icon" th:href="@{/img/favicon.ico}" href="../../img/favicon.ico" />
+        <link rel="shortcut icon" type="image/x-icon" th:href="@{/images/favicon.ico}" href="../../images/favicon.ico" />
         <link th:href="@{/bootstrap/css/bootstrap-responsive.min.css}" href="../../bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen"/>
         <link th:href="@{/assets/styles.css}" href="../../assets/styles.css" rel="stylesheet" media="screen"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -16,14 +16,14 @@
             <div class="navbar-inner">
                 <!--Image-->
                 <div class="navbar-static-top col1" style="background: #f5f8fb">
-                    <a href="#"><img th:src="@{/images/header2.jpg}" src="../../images/header2.jpg"/></a>
+                    <a href="#"><img th:src="@{/images/header.jpg}" src="../../images/header2.jpg"/></a>
                 </div>
                 <div class="container-fluid">
                     <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> <span class="icon-bar"></span>
                      <span class="icon-bar"></span>
                      <span class="icon-bar"></span>
                     </a>
-                    <a class="brand" href="#">Nombre del Modulo</a>
+                    <a class="brand" href="#">Atención Farmaceutica</a>
                     <div class="nav-collapse collapse">
                         <ul class="nav pull-right">
                             <li class="dropdown">
@@ -132,7 +132,7 @@
                 <div class="span9" id="content">
                       <!-- morris stacked chart -->
                     <div class="row-fluid">
-                     <!-- form demo -->
+                        <!-- form demo -->
                         <div class="row-fluid section">
                              <!-- block -->
                             <div class="block">
@@ -166,53 +166,56 @@
                                                 <div class="form-actions">
                                                     <button id="addBtn" class="btn btn-primary" ng-click="addFilm()">Añadir Item</button>
                                                     <button type="reset" class="btn">Cancel</button>
+                                                    <h4>{{msg}}</h4>
                                                 </div>
                                             </fieldset>
-
                                         </form>
-
                                     </div>
                                 </div>
                             </div>
+                            <!-- /block -->
                         </div>
-                        <!-- /block -->
+                        <!-- /form demo -->
+                        <div class="row-fluid">
+                            <div class="block2">
+                                <div class="navbar navbar-inner block-header">
+                                    <div class="muted pull-left">RESULTADOS</div>
+                                </div>
+                                <div class="block-content collapse in">
+                                    <div class="span12">
+                                        <table class="table">
+                                            <thead>
+                                            <tr>
+                                                <th>ItemId</th>
+                                                <th>ItemDesc</th>
+                                                <th>Image</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody>
+                                            <tr ng-repeat="film in films">
+                                                <td>{{film.itemId}}</td>
+                                                <td>{{film.itemDesc}}</td>
+                                                <td>{{film.image}}</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /block -->
+                        </div>
                     </div>
-	            <!-- /form demo -->
-                         <div class="row-fluid">
-                             <!-- block -->
-                             <div class="block2">
-                                 <div class="navbar navbar-inner block-header">
-                                     <div class="muted pull-left">RESULTADOS</div>
-                                 </div>
-                                 <div class="block-content collapse in">
-                                     <div class="span12">
-                                         <table class="table">
-                                             <thead>
-                                             <tr>
-                                                 <th>ItemId</th>
-                                                 <th>ItemDesc</th>
-                                                 <th>Image</th>
-                                             </tr>
-                                             </thead>
-                                             <tbody>
-                                                 <tr ng-repeat="film in films">
-                                                     <td>{{film.itemId}}</td>
-                                                     <td>{{film.itemDesc}}</td>
-                                                     <td>{{film.image}}</td>
-                                                 </tr>
-                                             </tbody>
-                                         </table>
-                                     </div>
-                                 </div>
-                             </div>
-                         </div>
+                    <!--/div row-fluid-->
                 </div>
             </div>
         </div>
-        <h4>{{msg}}</h4>
+        <!--/.fluid-container-->
+
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular.js"></script>
         <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.21/angular-resource.js"></script>
         <script th:src="@{/js/services.js}" src="../../js/services.js" />
+        <script th:src="@{/vendors/jquery-1.9.1.js}" src="../../vendors/jquery-1.9.1.js"></script>
+        <script th:src="@{/bootstrap/js/bootstrap.min.js}" src="../../bootstrap/js/bootstrap.min.js"></script>
     </body>
 
 </html>
