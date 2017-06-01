@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>FARMATODO</title>
+    <meta charset="utf-8" />
+    <link th:href="@{/bootstrap/css/bootstrap.min.css}" href="../../bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen"/>
+    <link rel="shortcut icon" type="image/x-icon" th:href="@{/images/favicon.ico}" href="../../images/favicon.ico" />
+    <link th:href="@{/bootstrap/css/bootstrap-responsive.min.css}" href="../../bootstrap/css/bootstrap-responsive.min.css" rel="stylesheet" media="screen"/>
+    <link th:href="@{/assets/styles.css}" href="../../assets/styles.css" rel="stylesheet" media="screen"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+</head>
+<body>
+
+<div th:replace="fragments/header :: header">
+    <!-- ============================================================================ -->
+    <!-- This content is only used for static prototyping purposes (natural templates)-->
+    <!-- and is therefore entirely optional, as this markup fragment will be included -->
+    <!-- from "fragments/header.html" at runtime.                                     -->
+    <!-- ============================================================================ -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">Static header</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="hero-unit">
+        <h1>Test</h1>
+        <p>
+            Welcome to the Spring MVC Quickstart application!
+            Get started quickly by signing up.
+        </p>
+        <p>
+            <a href="/signup" th:href="@{/signup}" class="btn btn-large btn-success">Sign up</a>
+        </p>
+    </div>
+    <!--div th:replace="fragments/footer :: footer">&copy; 2016 The Static Templates</div-->
+</div>
+
+</body>
+</html>

@@ -26,7 +26,7 @@ public final class Constantes {
     /**
      * Nombre de la aplicaci&oacute;n.
      */
-    public static final String NOMBRE_APLICACION = "SpringAngular";
+    public static final String NOMBRE_APLICACION = "ATENCION FARMACEUTICA";
 
     /**
      * C&oacute;digo de la aplicaci&oacute;n.
@@ -36,17 +36,12 @@ public final class Constantes {
     /**
      * Descripci&oacute;n de la aplicaci&oacute;n.
      */
-    public static final String DESCRIPCION_APLICACION = "Consulta la descripción, el recipe, cantidad en inventario de los productos recomendados";
+    public static final String DESCRIPCION_APLICACION = "comendados";
 
     /**
      * Plataforma.
      */
-    public static final String PLATAFORMA = "weblogic11g 10.3.6 java 1.7";
-
-    /**
-     * Procedimientos de BD utilizado.
-     */
-    public static final String SEARCH_RECOMMENDED = "{ CALL ITEM_RECOMMENDED_SQL.SEARCH_RECOMMENDED ( ?, ?, ?, ?, ?, ? ) }";
+    public static final String PLATAFORMA = "weblogic11g 12.2.0 java 1.8";
 
     /**
      * C&oacute;digo de &eacute;xito devuelto por un procedimiento o funci&oacute;n de BD.

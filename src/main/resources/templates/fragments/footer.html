@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app="ItemsApp" xmlns:th="http://www.thymeleaf.org" xmlns="http://www.w3.org/1999/html">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <title>FARMATODO</title>
     <meta charset="utf-8" />
@@ -9,11 +9,16 @@
     <link th:href="@{/assets/styles.css}" href="../../assets/styles.css" rel="stylesheet" media="screen"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
 </head>
-
-<body ng-app="springmvc-angular" ng-controller="ItemController" ng-init="getItems()">
-<div th:replace="fragments/header :: header">&nbsp;</div>
-<div th:replace="demo :: Additem">&nbsp;</div>
-
+<script th:src="@{/vendors/jquery-1.9.1.min.js}" src="../../vendors/jquery-1.9.1.min.js"></script>
+<script th:src="@{/bootstrap/js/bootstrap.min.js}" src="../../bootstrap/js/bootstrap.min.js"></script>
+<body>
+<div th:fragment="footer">
+    <table>
+    <tr>
+        <td width="459" height="40"><div align="left"><span class="fuenteWizard">&nbsp;&nbsp;Herramienta optimizada para IE9, Chrome y FireFox.</span></div></td>
+        <td width="410"><div align="right"><span class="fuenteWizard">FARMATODO C.A. 2017. ${NameApp} Versi&oacute;n: 1.0.0&nbsp;&nbsp;</span></div></td>
+    </tr>
+    </table>
+</div>
 </body>
-<div th:replace="fragments/footer :: footer">...</div>
 </html>

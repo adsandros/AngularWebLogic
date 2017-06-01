@@ -1,17 +1,17 @@
 var nombreApp="/springmvc/";
 
-var app = angular.module('films', [ "ngResource" ]);
+var app = angular.module('ItemsApp', [ "ngResource" ]);
 
 app.controller('ItemController', [ '$scope', '$http',
 
     function($scope, $http) {
-        $scope.getFilms = function() {
+        $scope.getItems = function() {
             $http.get(nombreApp+'items').success(function(data) {
-                $scope.films = data;
+                $scope.Items = data;
             });
         }
 
-        $scope.addFilm = function() {
+        $scope.addItem = function() {
             $http.post(nombreApp+'items',
                 {
                     itemId : $scope.itemId,
@@ -20,7 +20,7 @@ app.controller('ItemController', [ '$scope', '$http',
                 }
             ).success(function(data) {
                 $scope.msg = 'Items creado correctamente';
-                $scope.getFilms();
+                $scope.getItems();
             }).error(function(data) {
                 $scope.msg = 'Se ha producido un error';
             });
